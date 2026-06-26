@@ -48,7 +48,7 @@ Right now I'm building multi-hop agentic pipelines for clinical data at Humana �
 | **Car Image Classifier** | Inception V3 classifier studying how epoch count + batch size affect accuracy — deployed as a Flask web app | Python, TensorFlow, Flask, AWS, Docker | https://colab.research.google.com/drive/1nSO0wWjsRw-fjkQPa_M1Yy3tC8rXYmpA, [https://github.com/kimaya-k/Car_Image_Classifier.git](https://github.com/kimaya-k/Car_Image_Classifier)
 | **Dynamic Memory Allocator** | custom malloc from scratch — segregated free lists, boundary tag coalescing, thread safety, corruption detection | C, pthreads |
 | **Recipe Management System** | Full-stack platform for small food businesses — auth, CRUD, ingredient scaling, cost management, YouTube integration | Java Spring Boot, MySQL, Thymeleaf | https://github.com/kimaya-k/Recipe_Manager
-| **Chat Messaging Platform** | Multi-user chat system with real-time messaging, friend and block management, user auth, and profile customization | Java socket server, persistent serialized storage, Swing GUI client | https://github.com/mattcling/Cs-180-Team-Project
+| **Chat Messaging Platform** | Multi-user chat system with real-time messaging, friend and block management, user auth, and profile customization | Java socket server, persistent serialized storage, Swing GUI client | https://github.com/mattcling/Cs-180-Team-Project.git
 
  · [Car Classifier Colab](https://colab.research.google.com/drive/1nSO0wWjsRw-fjkQPa_M1Yy3tC8rXYmpA)
 
