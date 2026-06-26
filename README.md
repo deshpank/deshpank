@@ -43,12 +43,12 @@ Right now I'm building multi-hop agentic pipelines for clinical data at Humana �
 | Project Name | Functionality | Tech Stack | Link
 |---------|-------------|-------|-------|
 | **UNIX Shell** | Fully-featured shell interpreter — pipes, I/O redirection, subshells, tab completion, wildcard globbing, raw-mode line editor | C++, Flex, Bison | 
-| **FlowFuel** 🏆 | Personalized nutrition + cycle tracking app — reverse-engineered Purdue Dining's menus, real-time AI meal recs | React, Node.js, Flask, Groq, RapidAPI | 🔗 [FlowFuel on Devpost](https://devpost.com/software/flowfuel), [FlowFuel Repo]https://github.com/Ys876/Fuelflow
+| **FlowFuel** 🏆 | Personalized nutrition + cycle tracking app — reverse-engineered Purdue Dining's menus, real-time AI meal recs | React, Node.js, Flask, Groq, RapidAPI | 🔗 [FlowFuel on Devpost](https://devpost.com/software/flowfuel), [FlowFuel Repo][https://github.com/Ys876/Fuelflow]
 | **Dow LIMS + Report Agent** | Lab data management system + LangGraph RAG agent that converts chat histories into structured visual reports | Python, LangGraph, DuckDB, FastAPI, Quarto |
-| **Car Image Classifier** | Inception V3 classifier studying how epoch count + batch size affect accuracy — deployed as a Flask web app | Python, TensorFlow, Flask, AWS, Docker | [Classifier Notebook]https://colab.research.google.com/drive/1nSO0wWjsRw-fjkQPa_M1Yy3tC8rXYmpA, [Classifier Repo][https://github.com/kimaya-k/Car_Image_Classifier.git](https://github.com/kimaya-k/Car_Image_Classifier)
+| **Car Image Classifier** | Inception V3 classifier studying how epoch count + batch size affect accuracy — deployed as a Flask web app | Python, TensorFlow, Flask, AWS, Docker | [Classifier Notebook]https://colab.research.google.com/drive/1nSO0wWjsRw-fjkQPa_M1Yy3tC8rXYmpA, [Classifier Repo][https://github.com/kimaya-k/Car_Image_Classifier.git]
 | **Dynamic Memory Allocator** | custom malloc from scratch — segregated free lists, boundary tag coalescing, thread safety, corruption detection | C, pthreads |
 | **Recipe Management System** | Full-stack platform for small food businesses — auth, CRUD, ingredient scaling, cost management, YouTube integration | Java Spring Boot, MySQL, Thymeleaf | https://github.com/kimaya-k/Recipe_Manager
-| **Chat Messaging Platform** | Multi-user chat system with real-time messaging, friend and block management, user auth, and profile customization | Java socket server, persistent serialized storage, Swing GUI client | [Message Platform repo]https://github.com/mattcling/Cs-180-Team-Project.git
+| **Chat Messaging Platform** | Multi-user chat system with real-time messaging, friend and block management, user auth, and profile customization | Java socket server, persistent serialized storage, Swing GUI client | [Message Platform repo][https://github.com/mattcling/Cs-180-Team-Project.git]
 
 ---
 
