@@ -107,8 +107,3 @@ Right now I'm building multi-hop agentic pipelines for clinical data at Humana â
 ![Ollama](https://img.shields.io/badge/Ollama-000000?style=for-the-badge&logo=ollama&logoColor=white)
 ![OpenAI](https://img.shields.io/badge/OpenAI-412991?style=for-the-badge&logo=openai&logoColor=white)
 ![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)
-
-```
-> git log --oneline
-```
-![Contribution Graph](./assets/contribution_graph.png)
