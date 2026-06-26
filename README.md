@@ -31,7 +31,7 @@ Right now I'm building multi-hop agentic pipelines for clinical data at Humana �
 |------|------|--------|-------|
 | [<img src="./assets/humana.jpg" width="60"/>](https://raw.githubusercontent.com/deshpank/deshpank/main/assets/humana.jpg) | Enterprise AI Intern | Humana | Multi-hop LangGraph agents for clinical vitals evaluation · Azure DevOps · Agile |
 | [<img src="./assets/catme.jpg" width="60"/>](https://raw.githubusercontent.com/deshpank/deshpank/main/assets/catme.jpg) | Software Developer | CATME | Backend dev in Perl + SQL · audit tracking system · Zendesk support engineering |
-| | Undergraduate Researcher | Tech Justice Lab | LLM profile inference attacks · AutoProfiler framework · privacy & de-anonymization research |
+| [<img src="./assets/techjusticelab.jpg" width="60"/>](https://raw.githubusercontent.com/deshpank/deshpank/main/assets/techjusticelab.jpg) | Undergraduate Researcher | Tech Justice Lab | LLM profile inference attacks · AutoProfiler framework · privacy & de-anonymization research |
 | | Student Developer | Dow × Data Mine | LIMS system · LangGraph Report Agent with RAG · DuckDB · FastAPI · Quarto visual reports |
 | | Software Intern | DataGenie AI | Multi-agent orchestration · n8n automation · agentic customer qualification workflows |
 
