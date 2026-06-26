@@ -1,7 +1,7 @@
 # I'm Kimaya 😄
 **CS @ Purdue · Enterprise AI Intern @ Humana · Software Developer @ CATME · LLM Privacy Risks Research** 
 
-[<img src="./assets/linkedin.png" width="20"/>](https://raw.githubusercontent.com/deshpank/deshpank/main/assets/linkedin.png) [LinkedIn](https://www.linkedin.com/in/kimaya-deshpande-026452253/) · [<img src="./assets/instagram.png" width="20"/>](https://raw.githubusercontent.com/deshpank/deshpank/main/assets/instagram.png) [Instagram](https://www.instagram.com/quark_brain/)
+[LinkedIn](https://www.linkedin.com/in/kimaya-deshpande-026452253/) · [Instagram](https://www.instagram.com/quark_brain/)
 
 ---
 
