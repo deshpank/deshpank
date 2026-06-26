@@ -43,7 +43,7 @@ Right now I'm building multi-hop agentic pipelines for clinical data at Humana �
 | Project | What it does | Stack | Links |
 |---------|-------------|-------|-------|
 | **UNIX Shell** | Fully-featured shell interpreter — pipes, I/O redirection, subshells, tab completion, wildcard globbing, raw-mode line editor | C++, Flex, Bison | — |
-| **FlowFuel** 🏆 | Personalized nutrition + cycle tracking app — reverse-engineered Purdue Dining's menus, real-time AI meal recs | React, Node.js, Flask, Groq, RapidAPI | [devpost](https://devpost.com/software/flowfuel) · [repo](https://github.com/Ys876/Fuelflow) |
+| **FlowFuel** 🏆 | Personalized nutrition + cycle tracking app — reverse-engineered Purdue Dining's menus, real-time AI meal recs | React, Node.js, Flask, Groq, RapidAPI | [flowfuel devpost](https://devpost.com/software/flowfuel) · [repo](https://github.com/Ys876/Fuelflow) |
 | **Dow LIMS + Report Agent** | Lab data management system + LangGraph RAG agent that converts chat histories into structured visual reports | Python, LangGraph, DuckDB, FastAPI, Quarto | — |
 | **Car Image Classifier** | Inception V3 classifier studying how epoch count + batch size affect accuracy — deployed as a Flask web app | Python, TensorFlow, Flask, AWS, Docker | [notebook](https://colab.research.google.com/drive/1nSO0wWjsRw-fjkQPa_M1Yy3tC8rXYmpA) · [repo](https://github.com/kimaya-k/Car_Image_Classifier) |
 | **Dynamic Memory Allocator** | Custom malloc from scratch — segregated free lists, boundary tag coalescing, thread safety, corruption detection | C, pthreads | — |
