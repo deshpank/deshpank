@@ -111,4 +111,4 @@ Right now I'm building multi-hop agentic pipelines for clinical data at Humana â
 ```
 > git log --oneline
 ```
-[![Kimaya's Activity Graph](https://github-readme-activity-graph.vercel.app/api?username=deshpank&bg_color=0d1117&color=C8B89A&line=8A7252&point=C8B89A&area=true&hide_border=true)](https://github.com/ashutosh00710/github-readme-activity-graph)
+![Contribution Graph](./assets/contribution_graph.png)
