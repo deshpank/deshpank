@@ -1,6 +1,6 @@
 # I'm Kimaya 😄
 **CS @ Purdue · Enterprise AI Intern @ Humana · Software Developer @ CATME · LLM Privacy Risks Research** 
-[LinkedIn] (https://www.linkedin.com/in/kimaya-deshpande-026452253/)
+[LinkedIn](https://www.linkedin.com/in/kimaya-deshpande-026452253/)
 
 ---
 
