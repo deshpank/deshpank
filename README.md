@@ -1,109 +1,240 @@
-# I'm Kimaya 😄
-**CS @ Purdue · Enterprise AI Intern @ Humana · Software Developer @ CATME · LLM Privacy Risks Research** 
+=head1 OVERVIEW
 
-[LinkedIn](https://www.linkedin.com/in/kimaya-deshpande-026452253/) · [Instagram](https://www.instagram.com/quark_brain/)
+Document stub to help new developers get going and guidence on how
+to work with the process
 
----
+=head1 DEVELOPMENT MACHINES
 
-```
-> kimaya --init
-```
+There are dedicated computers for CATME development which are running
+a version of CATME under a virtual machine.  These VMs are based on the
+same golden master that is running production (although production has
+some additional performance tweaks and security hardening).  All development
+work needs to be on a designated VM.
 
-I build things at the intersection of AI systems and backend infrastructure — pipelines that have an impact, agents that follow through workflows, and successfully working code that I have spent sleepless nights on. I'm a CS student at Purdue with a focus on ML/AI and backend development, and I'm drawn to problems where the technical challenge and the real-world stakes are both high.
+For learning how to setup a local VM see L<https://github.com/jjn1056/CatmeOps-V3>
 
-I am passionate about language models, privacy, and what it means to build technology that makes a difference.
+=head2 WORKING WITH GIT
 
----
+All developers should have a Github account that is dedicated to themselves.
+You are free to use an existing personal Github account, or you may wish to
+create a new account just for the CATME work.  You cannot use a shared account.
 
-```
-> cat aim.txt
-```
+You should always create a new branch cut from master when starting a new project.
+Please keep your local git repo up to date (git fetch and rebase off the Github
+master before cutting a new branch).  You must merge from master before submitting
+a PR.  Please review your PR for silly changes like pointless formatting only changes
+and to make sure you are not blowing away something you don't intend.  Remember that
+the reviewer has to examine every single proposed change and the more changes you
+have that are not on target is just going to make it harder to finish the review.
 
-Right now I'm building multi-hop agentic pipelines for clinical data at Humana — where the output shapes how clinicians understand a patient's health trajectory. Accuracy isn't a stretch goal here; it's the baseline for anything that matters. I also research LLM privacy attacks at the Tech Justice Lab, because understanding what these models leak about people feels like the other side of the same coin.
+Ideally Branches should be short lived.  Try to break your bigger projects into
+chunks that are no longer than 2 weeks.  Any branch older than 2 weeks will become
+increasingly hard to test and properly merge.
 
----
+=head2 CPAN DEPENDENCIES
 
-```
-> ls experiences/
-```
+All Perl CPAN dependencies are managed via the C<cpanfile> located in the root
+of the checkout directory C</var/www/src> or C<~/catme-git/>.  If you need a
+new dependency you should add it to the C<cpanfile> (althought please check with
+John before adding dependencies).
 
-| | Position | Company | Project Work |
-|------|------|--------|-------|
-| [<img src="./assets/humana.jpg" width="60"/>](https://raw.githubusercontent.com/deshpank/deshpank/main/assets/humana.jpg) | Enterprise AI Intern | Humana | Multi-hop LangGraph agents for clinical vitals evaluation · Azure DevOps · Agile |
-| [<img src="./assets/catme.jpg" width="60"/>](https://raw.githubusercontent.com/deshpank/deshpank/main/assets/catme.jpg) | Software Developer | CATME | Backend dev in Perl + SQL · audit tracking system · Zendesk support engineering |
-| [<img src="./assets/techjusticelab.jpg" width="60"/>](https://raw.githubusercontent.com/deshpank/deshpank/main/assets/techjusticelab.jpg) | Undergraduate Researcher | Tech Justice Lab | LLM profile inference attacks · AutoProfiler framework · privacy & de-anonymization research |
-| [<img src="./assets/dow.png" width="100"/>](https://raw.githubusercontent.com/deshpank/deshpank/main/assets/dow.png) | Student Developer | Dow × Data Mine | LIMS system · LangGraph Report Agent with RAG · DuckDB · FastAPI · Quarto visual reports |
-|  [<img src="./assets/datagenie.jpg" width="60"/>](https://raw.githubusercontent.com/deshpank/deshpank/main/assets/datagenie.jpg) | Software Intern | DataGenie AI | Multi-agent orchestration · n8n automation · agentic customer qualification workflows |
+When pulling changes down from master you may note that C<cpanfile> was updated;
+if so you must update your local dependencies to match.  You can do this most
+easily using a C<make> command (from the root of the project git checkout)
 
----
+    make update_cpanlib
 
-```
-> ls projects/
-```
+B<NOTE> Its probably a good idea to just have the habit of running this command
+anytime you sync from master, just to be sure you catch any updates.
 
-| Project | What it does | Stack | Links |
-|---------|-------------|-------|-------|
-| **FlowFuel** 🏆 | Personalized nutrition + cycle tracking app — reverse-engineered Purdue Dining's menus, real-time AI meal recs | React, Node.js, Flask, Groq, RapidAPI | 🔗[devpost](https://devpost.com/software/flowfuel) · 🔗[repo](https://github.com/Ys876/Fuelflow) |
-| **Dow LIMS + Report Agent** 📝 | Lab data management system + LangGraph RAG agent that converts chat histories into structured visual reports | Python, LangGraph, DuckDB, FastAPI, Quarto |  [repo](https://github.com/TheDataMine/f2025_s2026_wl_dow_agenticworkflow) |
-| **Car Image Classifier** 🚗 | Inception V3 classifier studying how epoch count + batch size affect accuracy — deployed as a Flask web app | Python, TensorFlow, Flask, AWS, Docker | 🔗[notebook](https://colab.research.google.com/drive/1nSO0wWjsRw-fjkQPa_M1Yy3tC8rXYmpA) · 🔗[repo](https://github.com/kimaya-k/Car_Image_Classifier) |
-| **Recipe Management System** 👩‍🍳 | Full-stack platform for small food businesses — auth, CRUD, ingredient scaling, cost management, YouTube integration | Java Spring Boot, MySQL, Thymeleaf | 🔗[repo](https://github.com/kimaya-k/Recipe_Manager) |
-| **Chat Messaging Platform** 💭 | Multi-user chat system with real-time messaging, friend and block management, user auth, and profile customization | Java, Sockets, Swing | 🔗[repo](https://github.com/mattcling/Cs-180-Team-Project) |
-| **UNIX Shell** 🐚 | Fully-featured shell interpreter — pipes, I/O redirection, subshells, tab completion, wildcard globbing, raw-mode line editor | C++, Flex, Bison | — |
-| **Dynamic Memory Allocator** 💾 | Custom malloc from scratch — segregated free lists, boundary tag coalescing, thread safety, corruption detection | C, pthreads | — |
+=head2 DATABASE MANAGEMENT
 
----
+You can open a PSQL terminal session with the Makefile command:
 
-```
-> cat skills.txt
-```
-**Languages**  
-![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=coffeescript&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
-![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
-![C++](https://img.shields.io/badge/C%2B%2B-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white)
-![SQL](https://img.shields.io/badge/SQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
-![Bash](https://img.shields.io/badge/Bash-4EAA25?style=for-the-badge&logo=gnubash&logoColor=white)
+    make db
 
-**ML / AI**  
-![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white)
-![TensorFlow](https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white)
-![scikit-learn](https://img.shields.io/badge/scikit--learn-F7931E?style=for-the-badge&logo=scikitlearn&logoColor=white)
-![NumPy](https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white)
-![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
-![Matplotlib](https://img.shields.io/badge/Matplotlib-11557C?style=for-the-badge&logo=python&logoColor=white)
-![Seaborn](https://img.shields.io/badge/Seaborn-4C72B0?style=for-the-badge&logo=python&logoColor=white)
-![HuggingFace](https://img.shields.io/badge/HuggingFace-FFD21E?style=for-the-badge&logo=huggingface&logoColor=black)
-![Jupyter](https://img.shields.io/badge/Jupyter-F37626?style=for-the-badge&logo=jupyter&logoColor=white)
+Database migrations are managed vis Sqitch: L<https://sqitch.org/>.You can review
+the online documentation but for the most part you need to either apply
+SQL migration updates that you pull down from master or create your own.  To
+apply updates you can use the Makefile command:
 
-**Web / Backend**  
-![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
-![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)
-![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
-![Express](https://img.shields.io/badge/Express-000000?style=for-the-badge&logo=express&logoColor=white)
-![Flask](https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white)
-![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)
-![GraphQL](https://img.shields.io/badge/GraphQL-E10098?style=for-the-badge&logo=graphql&logoColor=white)
-![TailwindCSS](https://img.shields.io/badge/Tailwind-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)
+    make update_db
 
-**Databases**  
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white)
-![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
-![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white)
-![Redis](https://img.shields.io/badge/Redis-DC382D?style=for-the-badge&logo=redis&logoColor=white)
-![SQLite](https://img.shields.io/badge/SQLite-07405E?style=for-the-badge&logo=sqlite&logoColor=white)
-![DynamoDB](https://img.shields.io/badge/DynamoDB-4053D6?style=for-the-badge&logo=amazondynamodb&logoColor=white)
+This command is idempotent so feel free to run it defensively anytime you merge
+master into your working branch.  You can combine this will updating any C<cpanfile>
+CPAN dependency changes with this command:
 
-**Infra / Cloud**  
-![AWS](https://img.shields.io/badge/AWS-FF9900?style=for-the-badge&logo=amazonaws&logoColor=white)
-![GCP](https://img.shields.io/badge/GCP-4285F4?style=for-the-badge&logo=googlecloud&logoColor=white)
-![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
-![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=githubactions&logoColor=white)
-![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
-![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
+    make update
 
-**LLM / Agents**  
-![LangChain](https://img.shields.io/badge/LangChain-1C3C3C?style=for-the-badge&logo=langchain&logoColor=white)
-![Ollama](https://img.shields.io/badge/Ollama-000000?style=for-the-badge&logo=ollama&logoColor=white)
-![OpenAI](https://img.shields.io/badge/OpenAI-412991?style=for-the-badge&logo=openai&logoColor=white)
-![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)
+Which will both update the DB and CPAN libs.  To check the status of your local
+database you can run (from the root of the git checkout).
+
+    sqitch status 
+
+If you need to add a new migration please be sure to have read the Postgresql
+Sqitch tutorial (L<https://sqitch.org/docs/manual/sqitchtutorial/>) to become
+more deeply aware of the system.  The most important command is the C<add>
+command (example, run from the root of the git checkout):
+
+    sqitch add 2020012800_class_timestamp -n 'timestamp for class'
+
+And that will create stubs under C</sql> directory for updates, reverts and verification
+scripts.  These scripts are SQL scripts.  You can review others in the directory
+for examples.  All three are mandatory (No PR without all three will be accepted).
+
+L<Sqitch> doesn't require it but for this project you must name each migration
+with a timestamp prefix (this just makes it easier for me to review the progression of
+migrations without having to review the plan file).  The pattern is:
+
+      YYYYMMDDII_meaningful_title
+
+Where C<YYYY> is a 4 digit year (2020), C<MM> is a two digit month (01-12 = Jan - Dec) and
+C<DD> is a two digit day (01-[28,29,30,31]).  <II> is a increment counter starting with '00'
+for each patch you do in a given day.
+
+The C<-n> flag is required and should expand on the meaninful name in order to help reviewers
+quickly grasp the value of the patch.
+
+You should group all the changes in a patch this is associated with a given unit of work.  Ideally
+the patch is as small as possible but don't scatter changes associated with one assignment over
+several patches if you can avoid that since it makes rollbacks harder and interfers with people
+understanding the totality of the work.
+
+Don't include 'extras' in your patch that are things you want but unrelated to the current
+project.  Place those in separate patches.
+
+B<NOTE>: If you add new tables to the database you need to review if you need to make changes
+to the bin/create_devdb.sh script.  This script is used to build a database dump suitable for
+development.  Its complicated, you'll probably need to ask John for details.
+
+=head2 ACCESSING THE DATABASE FROM THE HOST
+
+During the build we change the security on the Postgresql server running inside the guest
+virtual machine so tht you can access it from your HOST operating system.  You might find
+this useful if you are running database design and managment tools on your host OS.  Due to
+Vagrant port mapping, the Postgresql server will be accessible via port 5433.  Example logging
+into the guest virtual machine Postgresql server from a Psql commandline utility running in a
+terminal on the Host operating system:
+
+    psql --host localhost --port 5433 --dbname catme --user catmerw
+
+You can use those configuration values in a GUI tool like PgAdmin.
+
+=head2 ACCESSING THE WEB APPLICATION FROM THE HOST
+
+Although the Apache webserver runs on port 80/443 inside the guest virtual machine, Vagrant will
+map that to 8080 / 8443 on the host OS (because virtualbox doesn't run as root on your host OS).
+So if you want to open a web browser to the CATME application you need to specify the correct
+port in the URL:
+
+    https://localhost:8443/login/index
+
+Please note that we have a fake certificate on the vagrant development server so your browser
+might complain about that and require you to add a security exception.  I also find that 
+recent versions of Safari won't allow it at all.
+
+You can use the following credentials to get logged in.  This is a multi role user that can
+access administration, student and instructor screens:
+
+    user/email: faculty2@sysiphus.com
+    password:   greatone123
+
+=head2 ADVICE
+
+If you find yourself performing some wacky hack to get around how something
+is not working according to the process, please stop and ask John for the
+right solution ;)  CATME is not brain surgery and you shouldn't have to jump
+thru a ton of hoops to do simple things.
+
+For getting started on Perl try https://learn.perl.org/
+
+=head2 COOKBOOK
+
+General Makefile usage.  These commands are intended to be run from inside the GUEST
+virtual machine, off the root of the git repository checkout:
+
+    make help
+
+Tailing the web server logs:
+
+    make tail_logs
+
+opening a C<psql> session on the database:
+
+    make db
+
+Updating CPAN libraries and running outstanding database migrations.  Note that
+this command is idempotent so you can run it as often as you want without risk:
+
+    make update
+
+Reset the database to the current saved development DB.  Useful for testing and
+you need the DB to return to a known state.  Please note that when you reset
+the DB you lose existing sessions info and related transactional info so you 
+might need to log in again.  Also things like 'magic_strings' from outstanding
+password resets are canceled.  There maybe so other similar things.  For example
+the 'system_stats' table will be empty and you'll need to kick off a rebuilt of
+it from the administration screen if you need to see it.
+
+    make reset_devdb
+
+B<NOTE> This command will only run a a development virtual machine.
+
+There's other helpers built into the Makefile, its worth checking 'make help'
+for updates (and the README.pod in the Ops repo also has details). Just be
+warning that running the hourly and nightly jobs cn result in sending emails
+so be sure rto always use the sysiphus test accounts.
+
+=head1 DEPLOYMENT AND CHANGE MANAGEMENT
+
+=head2 Working on a ticket
+
+When you begin working on a new ticket you should cut a new branch from the top of
+the master branch.  While working on that ticket you should commit frequently your
+changes to the branch and you must push the branch up to the git repository at least
+once a day.  Never end the day or walk away from your development machine without
+pushing the current work up to the git repo (even if your code is in a broken state
+you should do this to avoid losing work in the event you suffer issues with your
+development machine).
+
+When work is completed on the ticket you should send a pull request for your branch
+and request a review.   Developers are not permitted to work directly off master or
+to merge to master branch without permission and code review.
+
+=head2 Deploying to production
+
+CATME generally follows a 'release frequently' approach to deployments.  We prefer
+to release smaller code batches which pass code review and QA rather than queue up a
+larger change set.   However we do not release code Friday - Sunday, nor after 4PM US
+Central time unless there's a clear emergency code release needed to address critical
+and time sensitive bugs and security issues.
+
+CATME Deployment is currently a manual process.  The release manager logs into the CATME
+production system via SSH (using a private key, and from an IP address that is opened to
+SSH via the firewall), elevates their priviledges and then pulls down code updates from
+git.  If necessary new code dependencies are installed (these dependencies are managed via
+the C<cpanfile>) and database migrations are applied (via C<sqitch>).   If neccessary
+we initiate a web server soft restart to load any new shared libraries.
+
+The C<Makefile> contains commands to semi automate this process.
+
+Once deployment is completed, the release manager should test basic systems such as login
+as well as check that any new behaviors contained in the release are functioning as expected.
+Also one should monitor both the system logs as well as Google Analytics for at least an hour
+to verify that no sudden upticks in error conditions occur.
+
+After the release is completed the release manager should email the product owners and inform
+them of the system status as well as any exception conditions that occured during the release (
+such as unexpected errors or downtime).
+
+=head2 Reverting 
+
+Generally we prefer to 'roll forward' on errors when possible, but if we encounter a critical
+hard error on production following a deployment and when the root cause is not quickly determined
+you can roll back using the following procedure:
+
+Check out the local git to th commit of the last release.  Run any C<sqitch> reversions needed.
+Soft restart the httpd server if needed.  Then verify the site function.   Afterwards you must
+email a report to the product owners.
+
+=cut
